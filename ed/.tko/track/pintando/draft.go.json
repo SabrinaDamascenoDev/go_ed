@@ -1,0 +1,48 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-02_14-23-59",
+            "content": "@@ -41,8 +41,28 @@\n     \n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n- \n"
+        },
+        {
+            "label": "2025-04-02_17-58-15",
+            "content": "@@ -17,27 +17,14 @@\n ort \n-(%0A%09\n %22fmt%22%0A\n-%09%22math%22%0A)%0A\n func\n@@ -41,238 +41,8 @@\n     \n-   var a float32 = fmt.Scanln()%0A%09   var b float32 = fmt.Scanln()%0A%09   var c float32 = fmt.Scanln()%0A%0A%09   var p float32%0A%0A%09   p = (a+b+c)/2%0A%0A%09   var area float32%0A%0A%09   area = math.Sqrt(p*(p-a)*(p-b)*(p-c))%0A%0A%09   fmt.Println(area)%0A%0A%09   %0A\n %0A%7D%0A \n"
+        },
+        {
+            "label": "2025-04-02_18-05-50",
+            "content": "@@ -58,32 +58,47 @@\n    var a float32\n+ = fmt.Scanln()\n %0A%09   var b float\n@@ -99,16 +99,31 @@\n  float32\n+ = fmt.Scanln()\n %0A%09   var\n@@ -133,21 +133,17 @@\n float32 \n-%0A%0A%09  \n+=\n  fmt.Sca\n@@ -147,19 +147,11 @@\n Scan\n-(&a, &b, &c\n+ln(\n )%0A%0A%09\n@@ -186,19 +186,17 @@\n +b+c)/2%0A\n-  \n %0A\n+\n %09   var \n@@ -274,16 +274,18 @@\n n(area)%0A\n+%0A%09\n    %0A%0A%7D%0A \n"
+        },
+        {
+            "label": "2025-04-02_18-07-55",
+            "content": "@@ -170,16 +170,37 @@\n +c)/2%0A  \n+%0A%09   var area float32\n %0A%0A%09   ar\n@@ -206,9 +206,8 @@\n rea \n-:\n = ma\n@@ -253,18 +253,11 @@\n rint\n-f(%22%25.2f%22, \n+ln(\n area\n"
+        },
+        {
+            "label": "2025-04-02_18-09-21",
+            "content": "@@ -253,14 +253,8 @@\n    %0A\n- %0A%09   \n %0A%7D%0A \n"
+        },
+        {
+            "label": "2025-04-02_18-09-30",
+            "content": "@@ -139,11 +139,29 @@\n %09   \n+var p float32%0A%0A%09   \n p \n-:\n = (a\n@@ -171,16 +171,17 @@\n c)/2%0A  %0A\n+%0A\n %09   area\n@@ -248,17 +248,19 @@\n rea)\n-  \n %0A   %0A %0A\n+%09   \n %0A%7D%0A \n"
+        },
+        {
+            "label": "2025-04-02_18-09-54",
+            "content": "@@ -60,26 +60,26 @@\n  var a float\n-64\n+32\n %0A%09   var b f\n@@ -82,18 +82,18 @@\n  b float\n-64\n+32\n %0A%09   var\n@@ -104,10 +104,10 @@\n loat\n-64\n+32\n  %0A%0A%09\n@@ -227,13 +227,19 @@\n  area)  \n+%0A   %0A \n %0A%0A%7D%0A \n"
+        },
+        {
+            "label": "2025-04-02_18-11-00",
+            "content": "@@ -139,27 +139,22 @@\n %09   \n-var p float64 %0A%09   \n+p := (a+b+c)/2\n %0A  %0A\n"
+        },
+        {
+            "label": "2025-04-02_18-12-09",
+            "content": "@@ -139,22 +139,27 @@\n %09   \n-p := (a+b+c)/2\n+var p float64 %0A%09   \n %0A  %0A\n"
+        },
+        {
+            "label": "2025-04-02_18-12-29",
+            "content": "@@ -221,10 +221,8 @@\n %25.2f\n-%5Cn\n %22, a\n"
+        },
+        {
+            "label": "2025-04-02_21-34-40",
+            "content": "package main\nimport (\n\t\"fmt\"\n\t\"math\"\n)\nfunc main() {\n       var a float64\n\t   var b float64\n\t   var c float64 \n\n\t   fmt.Scan(&a, &b, &c)\n\n\t   p := (a+b+c)/2\n  \n\t   area := math.Sqrt(p*(p-a)*(p-b)*(p-c))\n\n\t   fmt.Printf(\"%.2f\\n\", area)  \n\n}\n "
+        }
+    ]
+}

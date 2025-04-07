@@ -1,0 +1,39 @@
+remote: https://github.com/qxcodeed/arcade/blob/master/Readme.md
+version: 0.0.1
+database: database
+expanded:
+- introducao
+- aquecimento-com-fup
+- conceitos-básicos-de-c
+- aprendendo-um-pouco-sobre-oop-em-c-
+- arvores-
+- árvore---construindo-
+- recursao
+- recursão-estudo-
+- recursão-treinando-conceitos-i
+- recursão-treinando-conceitos-ii-
+- vetores
+- vetores-construindo-
+- vetores-resolvendo-problemas-simples-
+- vetores-otimizando-problemas-com-maps-e-sets-
+- listas-encadeadas
+- lista-construindo-
+tasks:
+  pintando: '{cov:100, aut:5, hab:5, idx:0}'
+  mumia: '{cov:100, aut:5, hab:5, idx:0}'
+  fuga: '{cov:100, aut:5, hab:5, idx:0}'
+  pedra: '{cov:100, aut:5, hab:5, idx:0}'
+  casais: '{cov:100, aut:5, hab:5, idx:0}'
+  baruel: '{cov:100, aut:5, hab:5, idx:0}'
+  gomos: '{cov:100, aut:5, hab:5, idx:0}'
+flags:
+  minimum: 0
+  reward: 0
+  percent: 0
+  admin: 0
+  skills: 0
+  graph: 1
+  devel: 0
+new_items: []
+lang: go
+index: baruel

@@ -1,0 +1,204 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-04_10-08-10",
+            "content": "@@ -263,217 +263,7 @@\n     \n-figurinhasRepetidas := %5B%5Dint%7B%7D%0A%0A    for i := 0; i %3C totalBaruel; i++%7B%0A        if(figurinhasTodas%5Bi%5D == figurinhasTodas%5Bi+1%5D)%7B%0A            figurinhasRepetidas = (figurinhasRepetidas, figurinhas)%0A        %7D%0A    %7D%0A\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-04_10-13-05",
+            "content": "@@ -423,14 +423,8 @@\n s = \n-append\n (fig\n@@ -455,17 +455,8 @@\n nhas\n-Totais%5Bi%5D\n )%0A  \n"
+        },
+        {
+            "label": "2025-04-04_10-15-17",
+            "content": "@@ -1,493 +1,37 @@\n-package main%0Aimport %22fmt%22%0Afunc main() %7B%0A    var totalFigurinhas, totalBaruel int%0A%0A    fmt.Scan(&totalFigurinhas, &totalBaruel)%0A%0A    var figurinhasTodas = make(%5B%5Dint, totalBaruel)%0A%0A    for i := 0; i %3C totalBaruel; i++%7B%0A        fmt.Scan(figurinhasTodas%5Bi%5D)%0A    %7D%0A%0A    figurinhasRepetidas := %5B%5Dint%7B%7D%0A%0A    for i := 0; i %3C totalBaruel-1; i++%7B%0A        if(figurinhasTodas%5Bi%5D == figurinhasTodas%5Bi+1%5D)%7B%0A          figurinhasRepetidas = append(figurinhasRepetidas, figurinhasTodas%5Bi%5D)%0A        %7D%0A    %7D%0A%0A%7D\n+@@ -398,10 +398,8 @@%0A     %0A-0,%0A    f\n %0A\n"
+        },
+        {
+            "label": "2025-04-04_16-14-47",
+            "content": "@@ -486,43 +486,8 @@\n    %7D\n-%0A    fmt.Print(figurinhasRepetidas)\n %0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-04_16-15-13",
+            "content": "@@ -491,67 +491,8 @@\n     \n-%0A    for i:= 0; i %3C len(figurinhasRepetidas); i++%7B%0A        \n fmt.\n@@ -516,22 +516,13 @@\n epetidas\n-%5Bi%5D)%0A    %7D\n+)\n %0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-04_16-17-28",
+            "content": "@@ -492,39 +492,8 @@\n    %0A\n-    fmt.Print(figurinhasTodas)%0A\n     \n"
+        },
+        {
+            "label": "2025-04-04_16-18-38",
+            "content": "@@ -228,17 +228,16 @@\n mt.Scan(\n-&\n figurinh\n"
+        },
+        {
+            "label": "2025-04-04_16-19-12",
+            "content": "@@ -489,24 +489,50 @@\n  %7D%0A    %0A    \n+fmt.Print(figurinhasTodas)\n %0A    for i:=\n@@ -591,17 +591,9 @@\n rint\n-f(%22%25v %22, \n+(\n figu\n"
+        },
+        {
+            "label": "2025-04-04_16-19-32",
+            "content": "@@ -497,72 +497,8 @@\n     \n-if len(figurinhasRepetidas) == 0%7B%0A        fmt.Println(%22N%22)%0A    %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-04_16-20-28",
+            "content": "@@ -554,25 +554,24 @@\n (%22N%22)%0A    %7D%0A\n-%0A\n     for i:= \n@@ -669,522 +669,6 @@\n  %7D%0A%0A\n-    figurinhasNaoAchadas := %5B%5Dint%7B%7D%0A    var achou bool%0A%0A    for i := 1; i %3C totalFigurinhas; i++%7B%0A        for j:= 0; j %3C totalBaruel; j++%7B%0A            if(figurinhasRepetidas%5Bj%5D == i)%7B%0A                achou = true%0A                break%0A            %7D%0A            if(achou == false)%7B%0A                figurinhasNaoAchadas = append(figurinhasNaoAchadas, i)%0A            %7D%0A            achou = false%0A        %7D%0A    %7D%0A    for i:=0; i %3C len(figurinhasNaoAchadas); i++%7B%0A        fmt.Printf(%22%25v %22, figurinhasNaoAchadas%5Bi%5D)%0A    %7D%0A%0A\n %7D%0A\n"
+        },
+        {
+            "label": "2025-04-04_16-26-47",
+            "content": "@@ -741,17 +741,16 @@\n = 1; i %3C\n-=\n  totalFi\n"
+        },
+        {
+            "label": "2025-04-04_16-27-02",
+            "content": "@@ -769,30 +769,8 @@\n ++%7B%0A\n-        achou = false%0A\n     \n@@ -1032,18 +1032,42 @@\n        %7D\n+%0A\n   \n+          achou = false\n %0A       \n"
+        },
+        {
+            "label": "2025-04-04_16-27-34",
+            "content": "@@ -849,26 +849,30 @@\n f(figurinhas\n-To\n+Repeti\n das%5Bj%5D == i)\n"
+        },
+        {
+            "label": "2025-04-04_16-28-13",
+            "content": "@@ -1143,10 +1143,8 @@\n tf(%22\n-%5Cn\n %25v %22\n"
+        },
+        {
+            "label": "2025-04-04_16-28-41",
+            "content": "@@ -636,10 +636,8 @@\n %22%25v \n-%5Cn\n %22, f\n@@ -1131,32 +1131,34 @@\n     fmt.Printf(%22\n+%5Cn\n %25v %22, figurinhas\n"
+        },
+        {
+            "label": "2025-04-04_16-28-55",
+            "content": "@@ -624,32 +624,34 @@\n  fmt.Printf(%22%25v \n+%5Cn\n %22, figurinhasRep\n@@ -727,28 +727,8 @@\n ool%0A\n-    fmt.Printf(%22%5Cn%22)\n %0A   \n"
+        },
+        {
+            "label": "2025-04-04_16-29-13",
+            "content": "@@ -742,17 +742,16 @@\n f(%22%5Cn%22)%0A\n-%0A\n     for \n@@ -1057,38 +1057,16 @@\n das, i)%0A\n-                break%0A\n         \n"
+        },
+        {
+            "label": "2025-04-04_16-30-39",
+            "content": "@@ -745,34 +745,8 @@\n %5Cn%22)\n-%0A    figurinhas := %5B%5Dint%7B%7D\n %0A%0A  \n@@ -760,33 +760,60 @@\n  := \n-0\n+1\n ; i %3C\n+=\n  total\n-Baruel\n+Figurinhas\n ; i++%7B%0A\n+        achou = false%0A\n     \n@@ -821,21 +821,20 @@\n    for j\n- \n := \n-1\n+0\n ; j %3C to\n@@ -842,18 +842,16 @@\n alBaruel\n--1\n ; j++%7B%0A \n@@ -863,17 +863,17 @@\n       if\n- \n+(\n figurinh\n@@ -884,34 +884,113 @@\n das%5B\n-i%5D != figurinhasTodas%5Bi+1%5D\n+j%5D == i)%7B%0A                achou = true%0A                break%0A            %7D%0A            if(achou == false)\n %7B%0A  \n@@ -1013,16 +1013,26 @@\n gurinhas\n+NaoAchadas\n  = appen\n@@ -1043,36 +1043,29 @@\n gurinhas\n-, figurinhasTodas%5Bi%5D\n+NaoAchadas, i\n )%0A      \n@@ -1085,32 +1085,34 @@\n ak%0A            %7D\n+  \n %0A        %7D%0A    %7D\n@@ -1144,25 +1144,26 @@\n gurinhas\n-%0A        \n+NaoAchadas\n ); i++%7B%0A\n@@ -1198,16 +1198,26 @@\n gurinhas\n+NaoAchadas\n %5Bi%5D)%0A   \n"
+        },
+        {
+            "label": "2025-04-04_16-43-09",
+            "content": "@@ -1062,16 +1062,25 @@\n gurinhas\n+%0A        \n ); i++%7B%0A\n"
+        },
+        {
+            "label": "2025-04-04_16-43-27",
+            "content": "@@ -670,18 +670,16 @@\n  %7D%0A%0A    \n-//\n figurinh\n@@ -710,10 +710,8 @@\n     \n-//\n var \n"
+        },
+        {
+            "label": "2025-04-04_16-43-48",
+            "content": "@@ -908,17 +908,19 @@\n asTodas%5B\n-j\n+i+1\n %5D%7B%0A     \n"
+        },
+        {
+            "label": "2025-04-04_16-44-45",
+            "content": "@@ -803,32 +803,80 @@\n talBaruel; i++%7B%0A\n+        for j := 1; j %3C totalBaruel-1; j++%7B%0A    \n         if figur\n@@ -912,14 +912,16 @@\n das%5B\n-i+1%5D%7B%0A\n+j%5D%7B%0A    \n     \n@@ -996,14 +996,32 @@\n     \n+    \n break%0A\n+            %7D%0A\n     \n"
+        },
+        {
+            "label": "2025-04-04_16-45-30",
+            "content": "@@ -935,24 +935,32 @@\n %5D)%0A         \n+   break\n %0A        %7D%0A \n"
+        },
+        {
+            "label": "2025-04-04_16-45-42",
+            "content": "@@ -796,34 +796,32 @@\n  i %3C totalBaruel\n--1\n ; i++%7B%0A        i\n"
+        },
+        {
+            "label": "2025-04-04_16-45-51",
+            "content": "@@ -944,161 +944,19 @@\n     \n-%7D%0A    %7D%0A%0A    if figurinhas%5Blen(figurinhas)-1%5D == figurinhasTodas%5BtotalBaruel-2)%5D%7B%0A        figurinhas = append(figurinhas, figurinhasTodas%5BtotalBaruel-1%5D)\n+ %0A        %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-04_16-48-21",
+            "content": "@@ -1018,16 +1018,17 @@\n Baruel-2\n+)\n %5D%7B%0A     \n"
+        },
+        {
+            "label": "2025-04-04_16-48-28",
+            "content": "@@ -805,17 +805,17 @@\n lBaruel-\n-2\n+1\n ; i++%7B%0A \n@@ -953,77 +953,8 @@\n  %7D%0A%0A\n-    figurinhas = append(figurinhas, figurinhasTodas%5BtotalBaruel-2%5D)%0A%0A\n     \n"
+        },
+        {
+            "label": "2025-04-04_16-50-10",
+            "content": "@@ -1055,17 +1055,17 @@\n has)-1%5D \n-!\n+=\n = figuri\n"
+        },
+        {
+            "label": "2025-04-04_16-50-38",
+            "content": "@@ -544,16 +544,18 @@\n mt.Print\n+ln\n (%22N%22)%0A  \n"
+        },
+        {
+            "label": "2025-04-04_16-53-48",
+            "content": "@@ -794,32 +794,34 @@\n  i %3C totalBaruel\n+-2\n ; i++%7B%0A        f\n@@ -823,78 +823,86 @@\n     \n-for j := 1; j %3C= totalFigurinhas; j++%7B%0A            for k := 0; k %3C l\n+if figurinhasTodas%5Bi%5D != figurinhasTodas%5Bi+1%5D%7B%0A            figurinhas = app\n en\n+d\n (fig\n@@ -912,15 +912,29 @@\n nhas\n-); k++%7B\n+, figurinhasTodas%5Bi%5D)\n %0A   \n@@ -942,235 +942,235 @@\n     \n+%7D%0A\n     \n+%7D%0A%0A\n     \n-if i == figurinhasTodas%5Bj%5D && figurinhas%5Bk%5D =! i%7B%0A                    figurinhas = append(figurinhas, figurinhasTodas%5Bj%5D)%0A                    break%0A                %7D%0A            %7D%0A            break%0A        %7D%0A    %7D%0A%0A    \n+figurinhas = append(figurinhas, figurinhasTodas%5BtotalBaruel-2%5D)%0A%0A    if figurinhas%5Blen(figurinhas)-1%5D != figurinhasTodas%5BtotalBaruel-2%5D%7B%0A        figurinhas = append(figurinhas, figurinhasTodas%5BtotalBaruel-1%5D)%0A    %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-04_16-59-02",
+            "content": "@@ -771,24 +771,385 @@\n %5Dint%7B%7D%0A%0A    \n+for i := 0; i %3C totalBaruel; i++%7B%0A        for j := 1; j %3C= totalFigurinhas; j++%7B%0A            for k := 0; k %3C len(figurinhas); k++%7B%0A                if i == figurinhasTodas%5Bj%5D && figurinhas%5Bk%5D =! i%7B%0A                    figurinhas = append(figurinhas, figurinhasTodas%5Bj%5D)%0A                    break%0A                %7D%0A            %7D%0A            break%0A        %7D%0A    %7D%0A\n %0A    %0A    fo\n"
+        },
+        {
+            "label": "2025-04-04_16-59-39",
+            "content": "@@ -845,11 +845,11 @@\n tf(%22\n- \n %25v\n+ \n %22, f\n"
+        },
+        {
+            "label": "2025-04-04_17-01-20",
+            "content": "@@ -631,11 +631,11 @@\n tf(%22\n- \n %25v\n+ \n %22, f\n@@ -841,16 +841,17 @@\n Printf(%22\n+ \n %25v%22, fig\n"
+        },
+        {
+            "label": "2025-04-04_17-01-35",
+            "content": "@@ -560,36 +560,8 @@\n   %7D%0A\n-    var primeiro bool = true\n %0A   \n@@ -611,141 +611,8 @@\n ++%7B%0A\n-        if(primeiro == true)%7B%0A            fmt.Printf(%22%25v%22, figurinhasRepetidas%5Bi%5D)%0A            primeiro = false%0A        %7D else %7B%0A    \n     \n@@ -661,27 +661,8 @@\n i%5D)%0A\n-        %7D%0A        %0A\n     \n"
+        },
+        {
+            "label": "2025-04-04_17-03-49",
+            "content": "@@ -1,581 +1,204 @@\n-package main%0Aimport %22fmt%22%0Afunc main() %7B%0A    var totalFigurinhas, totalBaruel int%0A%0A    fmt.Scan(&totalFigurinhas, &totalBaruel)%0A%0A    var figurinhasTodas = make(%5B%5Dint, totalBaruel)%0A     // Povoando o Array de Todas as Figs%0A    for i := 0; i %3C totalBaruel; i++%7B%0A        fmt.Scan(&figurinhasTodas%5Bi%5D)%0A    %7D%0A%0A    figurinhasRepetidas := %5B%5Dint%7B%7D%0A%0A    // Povoando Array de Figs Repetidas%0A    for i := 0; i %3C totalBaruel-1; i++%7B%0A        if(figurinhasTodas%5Bi%5D == figurinhasTodas%5Bi+1%5D)%7B%0A          figurinhasRepetidas = append(figurinhasRepetidas, figurinhasTodas%5Bi%5D)%0A        %7D%0A    %7D%0A    %0A\n+@@ -176,50 +176,9 @@%0A el)%250A%0A-     // Povoando o Array de Todas as Figs%0A %250A%0A+%0A     %0A@@ -296,48 +296,8 @@%0A %257B%257D%250A%250A%0A-    // Povoando Array de Figs Repetidas%250A%0A     %0A@@ -493,57 +493,8 @@%0A    %250A%0A-\n     \n@@ -245,77 +245,54 @@\n nt N\n+%250A\n %0A    \n-if len(figurinhasRepetidas) == 0%7B%0A        fmt.Print(%22N%22)%0A    %7D%0A%0A\n+ %0A@@ -559,75 +559,8 @@%0A    %257D%0A-%250A%250A\n     \n@@ -319,17 +319,22 @@\n  que est\n-%C3%A3\n+%25C3%25A3\n o repeti\n@@ -351,783 +351,106 @@\n mata\n-%C3%A7%C3%A3o pedida%0A    var primeiro bool = true%0A    for i:= 0; i %3C len(figurinhasRepetidas); i++%7B%0A        if(primeiro == true)%7B%0A            fmt.Printf(%22%25v%22, figurinhasRepetidas%5Bi%5D)%0A            primeiro = false%0A        %7D else %7B%0A            fmt.Printf(%22 %25v%22, figurinhasRepetidas%5Bi%5D)%0A        %7D%0A        %0A    %7D%0A%0A    //figurinhasNaoAchadas := %5B%5Dint%7B%7D%0A    //var achou bool%0A    fmt.Printf(%22%5Cn%22)%0A    figurinhas := %5B%5Dint%7B%7D%0A    for i := 0; i%3Clen(figurinhasRepetidas); i++%7B%0A        for j := 0; j %3C totalBaruel; j++%7B%0A            if figurinhasRepetidas%5Bi%5D == figurinhasTodas%5Bj%5D%7B%0A                figurinhasTodas%5Bj%5D = 900 + i%0A                break%0A            %7D%0A        %7D%0A    %7D%0A    fmt.Print(figurinhasTodas)%0A\n+%25C3%25A7%25C3%25A3o pedida%0A %250A   %0A@@ -947,24 +947,29 @@%0A := %255B%255Dint%257B%257D%250A%250A%0A+\n     \n+%250A\n %0A    \n-for i:=0; i %3C len(figurinhas); i++%7B%0A        fmt.Printf(%22%25v%22, figurinhas%5Bi%5D)%0A    %7D%0A%0A%7D\n+ %250A    for\n %0A\n"
+        },
+        {
+            "label": "2025-04-05_13-32-01",
+            "content": "@@ -1404,218 +1404,34 @@\n     \n-%0A    for i := 1; i %3C= totalFigurinhas; i++%7B%0A        for j := 0; j %3C totalBaruel; j++%7B%0A            if figurinhasRepetidas%5Bj%5D == i%7B%0A                figurinhas = append(figurinhas, i)%0A            %7D%0A        %7D%0A    %7D\n+fmt.Print(figurinhasTodas)\n %0A   \n"
+        },
+        {
+            "label": "2025-04-05_13-36-15",
+            "content": "@@ -1503,34 +1503,38 @@\n    if figurinhas\n-To\n+Repeti\n das%5Bj%5D == i%7B%0A   \n"
+        },
+        {
+            "label": "2025-04-05_13-38-37",
+            "content": "@@ -1037,32 +1037,34 @@\n     %0A    %7D%0A%0A    \n+//\n figurinhasNaoAch\n@@ -1079,24 +1079,26 @@\n %5B%5Dint%7B%7D%0A    \n+//\n var achou bo\n@@ -1610,340 +1610,8 @@\n    %7D\n-%0A%0A    for i := 1; i %3C= totalFigurinhas; i++%7B%0A        achou = false%0A        for j := 0; j %3C len(figurinhas); j++%7B%0A            if figurinhas%5Bi%5D == i%7B%0A                achou = true%0A                break%0A            %7D%0A        %7D%0A        if achou == false%7B%0A            figurinhasNaoAchadas = append(figurinhasNaoAchadas, i)%0A        %7D%0A    %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-05_13-40-59",
+            "content": "@@ -1741,17 +1741,17 @@\n urinhas%5B\n-j\n+i\n %5D == i%7B%0A\n"
+        },
+        {
+            "label": "2025-04-05_13-41-09",
+            "content": "@@ -1972,26 +1972,16 @@\n gurinhas\n-NaoAchadas\n ); i++%7B%0A\n@@ -2015,26 +2015,16 @@\n gurinhas\n-NaoAchadas\n %5Bi%5D)%0A   \n"
+        },
+        {
+            "label": "2025-04-05_13-41-21",
+            "content": "@@ -1943,73 +1943,8 @@\n     \n-if len(figurinhasNaoAchadas) == 0%7B%0A        fmt.Println(%22N%22)%0A    %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-05_13-42-13",
+            "content": "@@ -1139,25 +1139,24 @@\n  := %5B%5Dint%7B%7D%0A\n-%0A\n     for i :=\n@@ -2009,28 +2009,8 @@\n   %7D%0A\n-    primeiro = true%0A\n     \n@@ -2059,42 +2059,8 @@\n ++%7B%0A\n-        if(primeiro == true)%7B%0A    \n     \n@@ -2109,99 +2109,8 @@\n i%5D)%0A\n-        %7D else %7B%0A            fmt.Printf(%22%25v %22, figurinhasNaoAchadas%5Bi%5D)%0A        %7D%0A        %0A\n     \n"
+        },
+        {
+            "label": "2025-04-05_13-45-45",
+            "content": "@@ -2164,37 +2164,8 @@\n i%5D)%0A\n-            primeiro = false%0A\n     \n"
+        },
+        {
+            "label": "2025-04-05_13-46-07",
+            "content": "@@ -2289,26 +2289,8 @@\n    %7D\n-%0A    fmt.Println()\n %0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-05_13-46-38",
+            "content": "@@ -1992,25 +1992,18 @@\n mt.Print\n-%0A        \n+ln\n (%22N%22)%0A  \n"
+        },
+        {
+            "label": "2025-04-05_13-46-49",
+            "content": "@@ -1984,32 +1984,41 @@\n        fmt.Print\n+%0A        \n (%22N%22)%0A    %7D%0A    \n"
+        },
+        {
+            "label": "2025-04-05_13-46-55",
+            "content": "@@ -2130,17 +2130,16 @@\n intf(%22%25v\n- \n %22, figur\n@@ -2220,35 +2220,35 @@\n     fmt.Printf(%22\n- \n %25v\n+ \n %22, figurinhasNao\n"
+        },
+        {
+            "label": "2025-04-05_13-47-06",
+            "content": "@@ -2122,32 +2122,33 @@\n   fmt.Printf(%22%25v\n+ \n %22, figurinhasNao\n"
+        },
+        {
+            "label": "2025-04-05_13-47-15",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n"
+        },
+        {
+            "label": "2025-04-05_20-35-37",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n    var totalFigurinhas, totalBaruel int\n\n    fmt.Scan(&totalFigurinhas, &totalBaruel)\n\n    var figurinhasTodas = make([]int, totalBaruel)\n     // Povoando o Array de Todas as Figs\n    for i := 0; i < totalBaruel; i++{\n        fmt.Scan(&figurinhasTodas[i])\n    }\n\n    figurinhasRepetidas := []int{}\n\n    // Povoando Array de Figs Repetidas\n    for i := 0; i < totalBaruel-1; i++{\n        if(figurinhasTodas[i] == figurinhasTodas[i+1]){\n          figurinhasRepetidas = append(figurinhasRepetidas, figurinhasTodas[i])\n        }\n    }\n    \n    // Se nao tiver nenhuma fig repetida print N\n    if len(figurinhasRepetidas) == 0{\n        fmt.Print(\"N\")\n    }\n\n    //Imprime os valores que est\u00e3o repetidos na formata\u00e7\u00e3o pedida\n    var primeiro bool = true\n    for i:= 0; i < len(figurinhasRepetidas); i++{\n        if(primeiro == true){\n            fmt.Printf(\"%v\", figurinhasRepetidas[i])\n            primeiro = false\n        } else {\n            fmt.Printf(\" %v\", figurinhasRepetidas[i])\n        }\n        \n    }\n\n    figurinhasNaoAchadas := []int{}\n    var achou bool\n    fmt.Printf(\"\\n\")\n    figurinhas := []int{}\n\n    for i := 0; i<len(figurinhasRepetidas); i++{\n        for j := 0; j < totalBaruel; j++{\n            if figurinhasRepetidas[i] == figurinhasTodas[j]{\n                figurinhasTodas[j] = 900 + i\n                break\n            }\n        }\n    }\n    \n    for i := 1; i <= totalFigurinhas; i++{\n        for j := 0; j < totalBaruel; j++{\n            if figurinhasTodas[j] == i{\n                figurinhas = append(figurinhas, i)\n            }\n        }\n    }\n\n    for i := 1; i <= totalFigurinhas; i++{\n        achou = false\n        for j := 0; j < len(figurinhas); j++{\n            if figurinhas[j] == i{\n                achou = true\n                break\n            }\n        }\n        if achou == false{\n            figurinhasNaoAchadas = append(figurinhasNaoAchadas, i)\n        }\n    }\n    if len(figurinhasNaoAchadas) == 0{\n        fmt.Print(\"N\")\n    }\n    primeiro = true\n    for i:=0; i < len(figurinhasNaoAchadas); i++{\n        if(primeiro == true){\n            fmt.Printf(\"%v\", figurinhasNaoAchadas[i])\n            primeiro = false\n        } else {\n            fmt.Printf(\" %v\", figurinhasNaoAchadas[i])\n        }\n        \n    }\n    fmt.Println()\n\n}\n"
+        }
+    ]
+}

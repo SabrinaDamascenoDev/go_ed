@@ -1,0 +1,52 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-03_23-44-56",
+            "content": "@@ -41,634 +41,28 @@\n     \n-var valores int%0A    fmt.Scan(&valores)%0A%0A    var numerosCasais = make(%5B%5Dint, valores)%0A%0A    for i := 0; i %3C valores; i++%7B%0A        fmt.Scan(&numerosCasais%5Bi%5D)%0A    %7D%0A    var casais int%0A    for i := 0; i %3C valores; i++%7B%0A        if numerosCasais%5Bi%5D %3C 0%7B%0A            numerosCasais%5Bi%5D = numerosCasais%5Bi%5D*-1%0A        %7D else if numerosCasais%5Bi%5D %3E 0%7B%0A            numerosCasais%5Bi%5D = numerosCasais%5Bi%5D*-1%0A        %7D%0A        for j := 0; j %3C valores; j++%7B%0A            if numerosCasais%5Bi%5D == numerosCasais%5Bj%5D%7B%0A                casais++%0A                numerosCasais%5Bi%5D = 10000%0A                numerosCasais%5Bj%5D = 10000%0A            %7D%0A        %7D%0A    %7D\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-03_23-56-33",
+            "content": "@@ -669,30 +669,6 @@\n   %7D%0A\n-    fmt.Println(casais)%0A\n %7D%0A\n"
+        },
+        {
+            "label": "2025-04-03_23-56-56",
+            "content": "@@ -222,13 +222,8 @@\n int%0A\n-    %0A\n     \n@@ -454,17 +454,17 @@\n or j := \n-1\n+0\n ; j %3C va\n"
+        },
+        {
+            "label": "2025-04-03_23-57-21",
+            "content": "@@ -459,17 +459,17 @@\n or j := \n-0\n+1\n ; j %3C va\n@@ -644,30 +644,8 @@\n 000%0A\n-                break%0A\n     \n"
+        },
+        {
+            "label": "2025-04-03_23-57-35",
+            "content": "@@ -459,17 +459,17 @@\n or j := \n-1\n+0\n ; j %3C va\n"
+        },
+        {
+            "label": "2025-04-03_23-57-40",
+            "content": "@@ -638,9 +638,9 @@\n %5D = \n-5\n+1\n 0000\n"
+        },
+        {
+            "label": "2025-04-03_23-58-17",
+            "content": "@@ -593,16 +593,20 @@\n is%5Bi%5D = \n+1000\n 0%0A      \n@@ -634,17 +634,18 @@\n is%5Bj%5D = \n-1\n+50\n 000%0A    \n"
+        },
+        {
+            "label": "2025-04-03_23-59-07",
+            "content": "@@ -459,17 +459,17 @@\n or j := \n-0\n+1\n ; j %3C va\n"
+        },
+        {
+            "label": "2025-04-04_00-00-25",
+            "content": "@@ -249,32 +249,217 @@\n %3C valores; i++%7B%0A\n+        if numerosCasais%5Bi%5D %3C 0%7B%0A            numerosCasais%5Bi%5D = numerosCasais%5Bi%5D*-1%0A        %7D else if numerosCasais%5Bi%5D %3E 0%7B%0A            numerosCasais%5Bi%5D = numerosCasais%5Bi%5D*-1%0A        %7D%0A\n         for j :=\n@@ -511,17 +511,20 @@\n asais%5Bi%5D\n-+\n+ == \n numerosC\n@@ -535,13 +535,8 @@\n s%5Bj%5D\n- == 0\n %7B%0A  \n"
+        },
+        {
+            "label": "2025-04-04_00-01-47",
+            "content": "@@ -375,16 +375,93 @@\n asais++%0A\n+                numerosCasais%5Bi%5D = 0%0A                numerosCasais%5Bj%5D = 1000%0A\n         \n"
+        },
+        {
+            "label": "2025-04-04_00-02-21",
+            "content": "@@ -379,85 +379,8 @@\n s++%0A\n-                numerosCasais%5Bi%5D = 0%0A                numerosCasais%5Bj%5D = 1000%0A\n     \n"
+        },
+        {
+            "label": "2025-04-04_00-02-42",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var valores int\n    fmt.Scan(&valores)\n\n    var numerosCasais = make([]int, valores)\n\n    for i := 0; i < valores; i++{\n        fmt.Scan(&numerosCasais[i])\n    }\n    var casais int\n    \n    for i := 0; i < valores; i++{\n        for j := 0; j < valores; j++{\n            if numerosCasais[i]+numerosCasais[j] == 0{\n                casais++\n                numerosCasais[i] = 0\n                numerosCasais[j] = 1000\n                break\n            }\n        }\n    }\n    fmt.Println(casais)\n}\n"
+        }
+    ]
+}

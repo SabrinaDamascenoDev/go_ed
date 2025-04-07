@@ -1,0 +1,80 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-03_22-53-15",
+            "content": "@@ -41,722 +41,7 @@\n     \n-var competidores int%0A    fmt.Scan(&competidores)%0A%0A    var valor1, valor2 int %0A    var pontuacao %5Bcompetidores%5Dint%0A%0A    var pontuacaoDoCompetidor int %0A    for int i = 0; i %3C competidores; i++%7B%0A        fmt.Scan(&valor1, &valor2)%0A%0A        pontuacaoDoCompetidor = valor1 - valor2%0A        if pontuacaoDoCompetidor%3C0%7B%0A            pontuacaoDoCompetidor=pontuacaoDoCompetidor*-1%0A        %7D%0A        pontuacao%5Bi%5D = pontuacaoDoCompetidor%0A    %7D%0A    var menorPontuacaoo int = pontuacao%5B0%5D %0A    var competidorVencedor%0A    for int i = 0; i %3C competidores; i++%7B%0A        if(pontuacao%5Bi%5D %3C menorPontuacao)%7B%0A            menorPontuacao = pontuacao%0A            competidorVencedor = i%0A        %7D%0A    %7D%0A%0A    fmt.Println(competidorVencedor)%0A\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-03_23-04-39",
+            "content": "@@ -540,17 +540,16 @@\n encedor%0A\n-%0A\n     for \n@@ -553,10 +553,13 @@\n or i\n+nt i\n  \n-:\n = 0;\n"
+        },
+        {
+            "label": "2025-04-03_23-05-30",
+            "content": "@@ -188,34 +188,37 @@\n r int %0A    for i\n+nt i\n  \n-:\n = 0; i %3C competi\n"
+        },
+        {
+            "label": "2025-04-03_23-05-38",
+            "content": "@@ -536,20 +536,16 @@\n Vencedor\n- int\n %0A%0A    fo\n"
+        },
+        {
+            "label": "2025-04-03_23-06-04",
+            "content": "@@ -488,16 +488,17 @@\n ontuacao\n+o\n  int = p\n"
+        },
+        {
+            "label": "2025-04-03_23-06-16",
+            "content": "@@ -137,22 +137,9 @@\n cao \n-= make(%5B%5Dint, \n+%5B\n comp\n@@ -138,33 +138,36 @@\n ao %5Bcompetidores\n-)\n+%5Dint\n %0A%0A    var pontua\n"
+        },
+        {
+            "label": "2025-04-03_23-09-24",
+            "content": "@@ -115,24 +115,28 @@\n r2 int %0A    \n+var \n pontuacao :=\n@@ -133,17 +133,16 @@\n ntuacao \n-:\n = make(%5B\n"
+        },
+        {
+            "label": "2025-04-03_23-12-45",
+            "content": "@@ -668,19 +668,16 @@\n ontuacao\n-%5Bi%5D\n %0A       \n"
+        },
+        {
+            "label": "2025-04-03_23-13-44",
+            "content": "@@ -115,28 +115,24 @@\n r2 int %0A    \n-var \n pontuacao = \n@@ -129,16 +129,17 @@\n ntuacao \n+:\n = make(%5B\n"
+        },
+        {
+            "label": "2025-04-03_23-14-09",
+            "content": "@@ -765,10 +765,8 @@\n edor\n-+1\n )%0A%0A%7D\n"
+        },
+        {
+            "label": "2025-04-03_23-14-18",
+            "content": "@@ -730,53 +730,8 @@\n   %7D%0A\n-    competidorVencedor = competidorVencedor+1\n %0A   \n@@ -761,13 +761,15 @@\n Vencedor\n++1\n )%0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-03_23-15-18",
+            "content": "@@ -276,54 +276,8 @@\n 2)%0A%0A\n-        if valor1 %3E= 10 && valor2 %3E= 10%7B %0A    \n     \n@@ -328,20 +328,16 @@\n         \n-    \n if pontu\n@@ -356,20 +356,16 @@\n idor%3C0%7B%0A\n-    \n         \n@@ -423,26 +423,18 @@\n         \n- \n-   %7D%0A    \n+%7D%0A\n         \n@@ -474,28 +474,17 @@\n dor%0A    \n-    %7D%0A    %7D%0A\n+%7D\n %0A    var\n"
+        },
+        {
+            "label": "2025-04-03_23-19-13",
+            "content": "@@ -707,28 +707,8 @@\n acao\n- && pontuacao%5Bi%5D !=0\n )%7B%0A \n"
+        },
+        {
+            "label": "2025-04-03_23-21-46",
+            "content": "@@ -648,22 +648,20 @@\n i %3C \n-len(pontuacao)\n+competidores\n ; i+\n@@ -703,16 +703,36 @@\n ontuacao\n+ && pontuacao%5Bi%5D !=0\n )%7B%0A     \n"
+        },
+        {
+            "label": "2025-04-03_23-22-41",
+            "content": "@@ -541,17 +541,16 @@\n        %7D\n- \n %0A    %7D%0A%0A\n"
+        },
+        {
+            "label": "2025-04-03_23-24-52",
+            "content": "@@ -546,57 +546,8 @@\n   %7D \n-else %7B%0A            pontuacao%5Bi%5D = 10000%0A        %7D\n %0A   \n"
+        },
+        {
+            "label": "2025-04-03_23-26-19",
+            "content": "@@ -847,24 +847,69 @@\n     %7D%0A    %7D%0A\n+    competidorVencedor = competidorVencedor+1\n %0A    fmt.Pri\n"
+        },
+        {
+            "label": "2025-04-03_23-26-35",
+            "content": "@@ -690,36 +690,38 @@\n i := 0; i %3C \n-competidores\n+len(pontuacao)\n ; i++%7B%0A     \n"
+        },
+        {
+            "label": "2025-04-03_23-27-43",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var competidores int\n    fmt.Scan(&competidores)\n\n    var valor1, valor2 int \n    var pontuacao = make([]int, competidores)\n\n    var pontuacaoDoCompetidor int \n    for i := 0; i < competidores; i++{\n        fmt.Scan(&valor1, &valor2)\n\n        if valor1 >= 10 && valor2 >= 10{ \n            pontuacaoDoCompetidor = valor1 - valor2\n            if pontuacaoDoCompetidor<0{\n                pontuacaoDoCompetidor=pontuacaoDoCompetidor*-1\n            }\n            pontuacao[i] = pontuacaoDoCompetidor\n        } else {\n            pontuacao[i] = 10000\n        }\n    }\n\n    var menorPontuacao int = pontuacao[0] \n    var competidorVencedor int\n\n    for i := 0; i < competidores; i++{\n        if(pontuacao[i] < menorPontuacao){\n            menorPontuacao = pontuacao[i]\n            competidorVencedor = i\n        }\n    }\n\n    fmt.Println(competidorVencedor)\n\n}\n"
+        }
+    ]
+}

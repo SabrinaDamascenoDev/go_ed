@@ -1,0 +1,48 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-02_21-37-59",
+            "content": "@@ -41,172 +41,28 @@\n     \n-var helicoptero, policial, fugitivo, direcao int%0A    fmt.Scan(&helicoptero, &policial, &fugitivo, &direcao)%0A%0A    if direcao == -1%7B%0A        if fugitivo%3Cpolicial%0A    %7D\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-03_01-20-30",
+            "content": "@@ -149,99 +149,29 @@\n ao)%0A\n-    var conseguiu bool%0A%0A    switch direcao %7B%0A    case -1:%0A        if fugitivo-helicoptero%3E0\n+%0A    if direcao == -1\n %7B%0A  \n@@ -168,36 +168,32 @@\n  == -1%7B%0A        \n- \n-   \n if fugitivo-heli\n@@ -191,342 +191,17 @@\n tivo\n--helicoptero%3Efugitivo-policial%7B%0A                conseguiu = true%0A            %7D else %7B%0A                conseguiu = false%0A            %7D%0A        %7D else %7B%0A            if fugitivo-helicoptero%3Efugitivo-policial%7B%0A                conseguiu=false%0A            %7D else %7B%0A                conseguiu=true%0A            %7D%0A        %7D%0A    case 1:%0A        \n+%3Cpolicial\n %0A   \n"
+        },
+        {
+            "label": "2025-04-03_01-28-25",
+            "content": "@@ -591,102 +591,16 @@\n  1:%0A\n-%0A    %7D%0A%0A    if conseguiu==true%7B%0A        fmt.Println(%22S%22)%0A    %7D else %7B%0A        fmt.Println(%22N%22)\n+        \n %0A   \n"
+        },
+        {
+            "label": "2025-04-03_01-29-46",
+            "content": "@@ -177,74 +177,87 @@\n     \n-var distanciaH int = fugitivo-helicoptero%0A    var distanciaP int =\n+switch direcao %7B%0A    case -1:%0A        if fugitivo-helicoptero%3E0%7B%0A            if\n  fug\n@@ -266,251 +266,91 @@\n ivo-\n-policial%0A%0A    if distanciaH %3C 0 && distanciaP %3C 0%7B%0A        distanciaH = distanciaH*-1%0A        distanciaP = distanciaP*-1%0A    %7D%0A%0A    switch direcao %7B%0A    case -1:%0A        if distanciaH %3E 0 && distanciaP %3E 0%7B%0A            if distanciaH%3EdistanciaP\n+helicoptero%3Efugitivo-policial%7B%0A                conseguiu = true%0A            %7D else \n %7B%0A  \n@@ -364,33 +364,35 @@\n        conseguiu\n-=\n+ = \n false%0A          \n@@ -414,160 +414,63 @@\n lse \n- if distanciaH %3C 0 && distanciaP %3C 0%7B%0A            distanciaH = distanciaH*-1%0A            distanciaP = distanciaP*-1%0A            if distanciaH%3EdistanciaP\n+%7B%0A            if fugitivo-helicoptero%3Efugitivo-policial\n %7B%0A  \n@@ -493,19 +493,20 @@\n nseguiu=\n-tru\n+fals\n e%0A      \n@@ -512,34 +512,24 @@\n        %7D\n-%0A        %7D\n  else %7B%0A\n         \n@@ -524,46 +524,8 @@\n e %7B%0A\n-            if distanciaH%3EdistanciaP%7B%0A\n     \n@@ -538,36 +538,35 @@\n       conseguiu=\n-fals\n+tru\n e%0A            %7D%0A\n"
+        },
+        {
+            "label": "2025-04-03_16-15-15",
+            "content": "@@ -30,19 +30,23 @@\n c main()\n+ \n %7B%0A\n-%09\n+    \n var heli\n@@ -167,314 +167,734 @@\n uiu \n-int = 0%0A%09var conseguiuOuNao bool%0A%09var i int = fugitivo%0A%0A%09if direcao == -1%7B%0A%0A%09%09for conseguiu != 1%7B%0A%09%09%09if i == helicoptero%7B%0A%09%09%09%09conseguiu = 1%0A%09%09%09%09conseguiuOuNao = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%09if i == policial%7B%0A%09%09%09%09conseguiu = 1%0A%09%09%09%09conseguiuOuNao = false%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%09i--%0A%09%09%09if(i == 0)%7B%0A%09%09%09%09i=15%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09\n+bool%0A%0A    var distanciaH int = fugitivo-helicoptero%0A    var distanciaP int = fugitivo-policial%0A%0A    if distanciaH %3C 0 && distanciaP %3C 0%7B%0A        distanciaH = distanciaH*-1%0A        distanciaP = distanciaP*-1%0A    %7D%0A%0A    switch direcao %7B%0A    case -1:%0A        if distanciaH %3E 0 && distanciaP %3E 0%7B%0A            if distanciaH%3EdistanciaP%7B%0A                conseguiu=false%0A            %7D%0A        %7D else  if distanciaH %3C 0 && distanciaP %3C 0%7B%0A            distanciaH = distanciaH*-1%0A            distanciaP = distanciaP*-1%0A            if distanciaH%3EdistanciaP%7B%0A                conseguiu=true%0A            %7D%0A        %7D else %7B%0A            if distanciaH%3EdistanciaP%7B%0A                conseguiu=false%0A            %7D%0A        %7D%0A    case 1:%0A%0A    %7D%0A%0A    \n if c\n@@ -905,25 +905,24 @@\n guiu\n-OuNao \n ==\n- \n true%7B%0A\n-%09%09\n+        \n fmt.\n@@ -938,17 +938,20 @@\n S%22)%0A\n-%09\n+    \n %7D else %7B\n  %0A%09%09\n@@ -950,12 +950,17 @@\n se %7B\n- %0A%09%09\n+%0A        \n fmt.\n@@ -976,8 +976,12 @@\n N%22)%0A\n-%09\n+    \n %7D%0A%7D\n+%0A\n"
+        },
+        {
+            "label": "2025-04-03_20-00-02",
+            "content": "@@ -465,16 +465,12 @@\n %09%09%7D%0A\n-        \n+%09%7D%0A%09\n if c\n@@ -545,13 +545,8 @@\n N%22)%0A%09%7D%0A%7D\n-%0A%09%7D%0A%09\n"
+        },
+        {
+            "label": "2025-04-03_20-01-19",
+            "content": "@@ -465,410 +465,12 @@\n %09%09%7D%0A\n-%0A    %7D else if dire%C3%A7%C3%A3o == 1 %7B%0A        for conseguiu != 1%7B%0A            if i == helicoptero%7B%0A                conseguiu = 1%0A%09%09%09%09conseguiuOuNao = true%0A%09%09%09%09break%0A            %7D%0A            if i == policial%7B%0A                conseguiu = 1%0A                conseguiuOuNao = false%0A                break%0A            %7D%0A            i++%0A            if(i==15)%7B%0A                i = 0%0A            %7D%0A        %7D%0A    %7D%0A    %0A\n+    \n     \n@@ -496,24 +496,18 @@\n = true%7B%0A\n-        \n+%09%09\n fmt.Prin\n@@ -515,20 +515,17 @@\n ln(%22S%22)%0A\n-    \n+%09\n %7D else %7B\n@@ -526,24 +526,18 @@\n else %7B %0A\n-        \n+%09%09\n fmt.Prin\n@@ -549,16 +549,13 @@\n N%22)%0A\n-    %7D   %0A\n+%09%7D%0A%7D%0A%09\n %7D%0A%09\n"
+        },
+        {
+            "label": "2025-04-03_20-05-00",
+            "content": "@@ -476,26 +476,26 @@\n else if dire\n-ca\n+%C3%A7%C3%A3\n o == 1 %7B%0A   \n@@ -858,16 +858,20 @@\n %7D%0A    %7D%0A\n+    \n %0A    if \n"
+        },
+        {
+            "label": "2025-04-03_20-05-35",
+            "content": "@@ -234,16 +234,17 @@\n  == -1%7B%0A\n+%0A\n %09%09for co\n@@ -343,21 +343,16 @@\n %09%09%09%7D%0A%09%09%09\n-else \n if i == \n"
+        },
+        {
+            "label": "2025-04-03_22-09-55",
+            "content": "@@ -338,17 +338,20 @@\n eak%0A%09%09%09%7D\n- \n+%0A%09%09%09\n else if \n"
+        },
+        {
+            "label": "2025-04-03_22-10-13",
+            "content": "package main\nimport \"fmt\"\nfunc main(){\n\tvar helicoptero, policial, fugitivo, direcao int\n    fmt.Scan(&helicoptero, &policial, &fugitivo, &direcao)\n    var conseguiu int = 0\n\tvar conseguiuOuNao bool\n\tvar i int = fugitivo\n\n\tif direcao == -1{\n\t\tfor conseguiu != 1{\n\t\t\tif i == helicoptero{\n\t\t\t\tconseguiu = 1\n\t\t\t\tconseguiuOuNao = true\n\t\t\t\tbreak\n\t\t\t} else if i == policial{\n\t\t\t\tconseguiu = 1\n\t\t\t\tconseguiuOuNao = false\n\t\t\t\tbreak\n\t\t\t}\n\t\t\ti--\n\t\t\tif(i == 0){\n\t\t\t\ti=15\n\t\t\t}\n\t\t}\n\n    } else if direcao == 1 {\n        for conseguiu != 1{\n            if i == helicoptero{\n                conseguiu = 1\n\t\t\t\tconseguiuOuNao = true\n\t\t\t\tbreak\n            }\n            if i == policial{\n                conseguiu = 1\n                conseguiuOuNao = false\n                break\n            }\n            i++\n            if(i==15){\n                i = 0\n            }\n        }\n    }\n\n    if conseguiuOuNao == true{\n        fmt.Println(\"S\")\n    } else { \n        fmt.Println(\"N\")\n    }   \n}\n\t"
+        }
+    ]
+}
