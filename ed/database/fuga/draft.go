@@ -37,7 +37,7 @@ func main(){
                 break
             }
             i++
-            if(i==15){
+            if(i==16){
                 i = 0
             }
         }
