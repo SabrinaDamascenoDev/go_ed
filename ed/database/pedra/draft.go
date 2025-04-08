@@ -32,6 +32,10 @@ func main() {
         }
     }
 
-    fmt.Println(competidorVencedor)
+    if(competidorVencedor == 0){
+        fmt.Println("sem ganhador")
+    } else {
+        fmt.Println(competidorVencedor)
+    }
 
 }
