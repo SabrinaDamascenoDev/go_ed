@@ -34,8 +34,17 @@ func alone(vet []int) []int {
 }
 
 func couple(vet []int) int {
-	_ = vet
-	return 0
+	casais := 0
+	for i := 0; i < len(vet); i++ {
+		for j := 0; j < len(vet); j++{
+			if vet[i] + vet[j] == 0{
+				casais++
+				vet[i] = 0
+				vet[j] = 1000
+			}
+		}
+	}
+	return casais
 }
 
 func hasSubseq(vet []int, seq []int, pos int) bool {
@@ -52,15 +61,40 @@ func subseq(vet []int, seq []int) int {
 }
 
 func erase(vet []int, posList []int) []int {
-	_ = vet
-	_ = posList
-	return nil
+	newVet := []int{}
+
+	for i := 0; i< len(posList); i++{
+		for j := 0; j < len(vet); j++{
+			if posList[i] == j{
+				vet[j] = 0
+			}
+		}
+	}
+
+	for i := 0; i < len(vet) ; i++{
+		if vet[i] != 0{
+			newVet = append(newVet, vet[i])
+		}
+	}
+
+	return newVet
 }
 
 func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
-	return nil
+	novoArray := []int{}
+	for i := 0; i < len(vet); i++{
+		if vet[i] == value{
+			vet[i] = 0
+		}
+	}
+
+	for i := 0; i < len(vet); i++{
+		if vet[i] != 0{
+			novoArray = append(novoArray, vet[i])
+		}
+	}
+	return novoArray
+	
 }
 
 func main() {
