@@ -6,44 +6,105 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"sort"
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	vetHomens := []int{}
+	for i := 0; i<len(vet); i++{
+		if vet[i] > 0{
+			vetHomens = append(vetHomens, vet[i])
+		}
+	}
+	return vetHomens
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	vetCalmWomen := []int{}
+	for i := 0; i < len(vet); i++{
+		if vet[i] > -10 && vet[i] < 0{
+			vetCalmWomen = append(vetCalmWomen, vet[i])
+		}
+	}
+	return vetCalmWomen
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	vetSort := []int{}
+	for i := 0; i < len(vet); i++{
+		vetSort = append(vetSort, vet[i])
+	}
+	sort.Ints(vetSort)
+	return vetSort
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	vetSortStress := []int{}
+	for i := 0; i < len(vet); i++{
+		if vet[i] > -10 && vet[i] < 0{
+			vetSortStress = append(vetSortStress, vet[i])
+			vet[i] = 0
+		}
+	}
+	vetExem := []int{}
+	for i := 0; i < len(vet); i++{
+		if vet[i] > 0 && vet[i] < 13{
+			vetExem = append(vetExem, vet[i])
+			vet[i] = 0
+		}
+	}
+	sort.Ints(vetExem)
+
+	for _, val := range vetExem {
+		vetSortStress = append(vetSortStress, val)
+	}
+
+	sort.Ints(vet)
+	
+	for i := len(vet)-1; i >= 0; i--{
+		if vet[i] != 0{
+			vetSortStress = append(vetSortStress, vet[i])
+		}
+		
+	}
+	return vetSortStress
 }
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	vetReverse := []int{}
+	primeiro := len(vet)-1
+	for i := primeiro; i >= 0; i--{
+		vetReverse = append(vetReverse, vet[i])
+	}
+	return vetReverse
 }
 
 func reverseInplace(vet []int) {
 	_ = vet
 }
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+
+	repetidos := make(map[int]bool)
+	vetUnicos := []int{}
+	for _, v := range vet{
+		if !repetidos[v]{
+			repetidos[v] = true
+			vetUnicos = append(vetUnicos, v)
+		}
+	}
+	
+	return vetUnicos
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	vetRepeated := []int{}
+	sort.Ints(vet)
+	for i := 0; i < len(vet)-1; i++{
+		if vet[i] == vet[i+1]{
+			vetRepeated = append(vetRepeated, vet[i])
+		}
+	}
+	return vetRepeated
 }
 
 func main() {
