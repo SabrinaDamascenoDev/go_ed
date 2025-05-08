@@ -9,6 +9,7 @@ import (
 	"sort"
 )
 
+// O nivel de estresse é o valor absoluto, refazer a questão com essa noção
 func getMen(vet []int) []int {
 	vetHomens := []int{}
 	for i := 0; i<len(vet); i++{

@@ -4,7 +4,6 @@ import (
     "container/list"
 )
 
-
 func main() {
     var elementos int
     var espada int

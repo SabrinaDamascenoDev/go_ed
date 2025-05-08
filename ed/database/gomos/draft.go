@@ -4,7 +4,7 @@ import "fmt"
 type Gomo struct{
     X int
     Y int
-}
+} 
 
 func main() {
     var quantidadeGomos int

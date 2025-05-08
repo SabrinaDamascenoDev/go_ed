@@ -23,7 +23,6 @@ func main(){
 				i=15
 			}
 		}
-
     } else if direcao == 1 {
         for conseguiu != 1{
             if i == helicoptero{
